@@ -4,7 +4,7 @@ Nama: Ahmad Fatahillah
 
 NPM: 2106653741
 
-**Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya.**
+## Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya
 
 Semua komponen di dalam Flutter adalah dibentuk dari widget. Terdapat dua jenis widget yakni **Stateless widget** dan **Stateful widget**. Mudahnya, stateless widget merupakan widget yang isinya tidak dapat berubah (statis). Sedangkan stateful widget merupakan widget yang isinya dapat berubah (dinamis).
 

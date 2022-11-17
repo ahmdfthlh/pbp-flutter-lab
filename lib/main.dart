@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:counter_7/budget_page.dart';
+import 'package:counter_7/tambah_budget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -83,24 +85,48 @@ class _MyHomePageState extends State<MyHomePage> {
           // the App.build method, and use it to set our appbar title.
           title: Text(widget.title),
         ),
-        body: Center(
-          // Center is a layout widget. It takes a single child and positions it
-          // in the middle of the parent.
+        drawer: Drawer(
           child: Column(
-            // Column is also a layout widget. It takes a list of children and
-            // arranges them vertically. By default, it sizes itself to fit its
-            // children horizontally, and tries to be as tall as its parent.
-            //
-            // Invoke "debug painting" (press "p" in the console, choose the
-            // "Toggle Debug Paint" action from the Flutter Inspector in Android
-            // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-            // to see the wireframe for each widget.
-            //
-            // Column has various properties to control how it sizes itself and
-            // how it positions its children. Here we use mainAxisAlignment to
-            // center the children vertically; the main axis here is the vertical
-            // axis because Columns are vertical (the cross axis would be
-            // horizontal).
+            children: [
+              const Padding(
+                padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+              ),
+              ListTile(
+                title: const Text('counter_7'),
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            const MyHomePage(title: 'Home | Flutter Demo')),
+                  );
+                },
+              ),
+              ListTile(
+                title: const Text('Tambah Budget'),
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const TambahBudgetPage()),
+                  );
+                },
+              ),
+              ListTile(
+                title: const Text('List Budget'),
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ListBudgetPage()),
+                  );
+                },
+              ),
+            ],
+          ),
+        ),
+        body: Center(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               _counter % 2 != 0
