@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:counter_7/budget_page.dart';
-import 'package:counter_7/tambah_budget.dart';
+import 'package:counter_7/page/budget_page.dart';
+import 'package:counter_7/page/tambah_budget.dart';
+import 'package:counter_7/page/mywatchlist_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -92,36 +93,46 @@ class _MyHomePageState extends State<MyHomePage> {
                 padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
               ),
               ListTile(
-                title: const Text('counter_7'),
-                onTap: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) =>
-                            const MyHomePage(title: 'Home | Flutter Demo')),
-                  );
-                },
-              ),
-              ListTile(
-                title: const Text('Tambah Budget'),
-                onTap: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const TambahBudgetPage()),
-                  );
-                },
-              ),
-              ListTile(
-                title: const Text('List Budget'),
-                onTap: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ListBudgetPage()),
-                  );
-                },
-              ),
+              title: const Text('counter_7'),
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          const MyHomePage(title: 'Home | Flutter Demo')),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('Tambah Budget'),
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const TambahBudgetPage()),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('List Budget'),
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ListBudgetPage()),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('My Watch List'),
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const MyWatchListPage()),
+                );
+              },
+            ),
             ],
           ),
         ),

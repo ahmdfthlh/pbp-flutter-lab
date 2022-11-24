@@ -1,6 +1,7 @@
 import 'package:counter_7/main.dart';
-import 'package:counter_7/budget_page.dart';
-import 'package:counter_7/models/budget.dart';
+import 'package:counter_7/page/budget_page.dart';
+import 'package:counter_7/page/mywatchlist_page.dart';
+import 'package:counter_7/model/budget.dart';
 import 'package:flutter/material.dart';
 
 class TambahBudgetPage extends StatefulWidget {
@@ -36,7 +37,7 @@ class _TambahBudgetPageState extends State<TambahBudgetPage> {
                   context,
                   MaterialPageRoute(
                       builder: (context) =>
-                          const MyHomePage(title: 'Flutter Demo Page')),
+                          const MyHomePage(title: 'Home | Flutter Demo')),
                 );
               },
             ),
@@ -57,6 +58,16 @@ class _TambahBudgetPageState extends State<TambahBudgetPage> {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const ListBudgetPage()),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('My Watch List'),
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const MyWatchListPage()),
                 );
               },
             ),
